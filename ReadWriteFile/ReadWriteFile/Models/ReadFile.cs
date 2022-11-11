@@ -8,10 +8,8 @@ namespace ReadWriteFile.Models
 {
     public interface IFileOperation
     {
-
         string Path { get; set; }
         void Read();
-
     }
     internal class FileOperation:IFileOperation
     {
@@ -25,9 +23,7 @@ namespace ReadWriteFile.Models
         public virtual void Read()
         {
             Text = System.IO.File.ReadAllText(Path);
-        }
-
-        
+        }       
 
 
     }

@@ -18,13 +18,22 @@ namespace ReadWriteFile.Models
 
         List<T> list;
 
-        public override void Save()
+        public override bool Save()
         {
-            using (var writer = new StreamWriter(Path))
-            using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            try
             {
-                csv.WriteRecords(list);
+                using (var writer = new StreamWriter(Path))
+                using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+                {
+                    csv.WriteRecords(list);
+                }
+                return true;
             }
+            catch(Exception ex)
+            {
+                return false;
+            }
+           
         }
 
     }

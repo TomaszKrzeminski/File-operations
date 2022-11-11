@@ -19,9 +19,7 @@ namespace ReadWriteFile.Models
         public ConvertCsvToObject(string path)
         {
             Path = path;
-        }
-
-      
+        }      
 
         public List<T> Convert<T>()
         {

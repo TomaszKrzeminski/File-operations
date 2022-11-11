@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 
 namespace ReadWriteFile.Models
-{
+{//AutoMapper
     public class Mapper_YourNewStyleDB
     {
 

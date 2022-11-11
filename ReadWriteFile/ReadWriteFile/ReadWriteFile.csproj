@@ -69,6 +69,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -79,6 +80,7 @@
   <ItemGroup>
     <Compile Include="Models\ConvertCsvToObject.cs" />
     <Compile Include="Models\FileOperationJson.cs" />
+    <Compile Include="Models\GetFilePath.cs" />
     <Compile Include="Models\Mapper_YourNewStyle.cs" />
     <Compile Include="Models\ReadFile.cs" />
     <Compile Include="Models\SaveFile.cs" />
@@ -92,7 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Filesxxx\JsonFile.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SavedFiles\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
